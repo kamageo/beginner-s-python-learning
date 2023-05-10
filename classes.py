@@ -3,10 +3,10 @@ class Human:
         self.name = name
         self.age  = age
 
-    def print_name(self):
+    def what_is_your_name(self):
         print(self.name)
 
-    def print_age(self):
+    def how_old_are_you(self):
         print(self.age, 'лет')
 
 class Student( Human ):
@@ -15,10 +15,10 @@ class Student( Human ):
         self._school = _school
         self._class  = _class
 
-    def print_school(self):
+    def where_are_you_from(self):
         print( self._school )
 
-    def print_class(self):
+    def what_grade_are_you(self):
         print( self._class )
 
 class Teacher( Human ):
@@ -27,10 +27,10 @@ class Teacher( Human ):
         self._school = _school
         self._subject = _subject
 
-    def print_school(self):
+    def where_are_you_from(self):
         print( self._school )
 
-    def print_subject(self):
+    def what_are_you_teaching(self):
         print( self._subject )
 
 
@@ -39,29 +39,29 @@ class Director( Human ):
         super().__init__( name, age )
         self._school = _school
 
-    def print_school(self):
+    def where_are_you_from(self):
         print( self._school )
 
 class DTeacher( Teacher , Director ):
     pass
 
 st = Student( 'Коля', 16, 'Гимназия №52', 'класс 10А' )
-st.print_name   ()
-st.print_age    ()
-st.print_school ()
-st.print_class  ()
+st.what_is_your_name ()
+st.how_old_are_you   ()
+st.where_are_you_from()
+st.what_grade_are_you()
 
 print()
 
 st = Teacher( 'Алексей', 37, 'Гимназия №52', 'География' )
-st.print_name   ()
-st.print_age    ()
-st.print_school ()
-st.print_subject()
+st.what_is_your_name    ()
+st.how_old_are_you      ()
+st.where_are_you_from   ()
+st.what_are_you_teaching()
 
 print()
 
 st = Director( 'Евгений', 40, 'Гимназия №52' )
-st.print_name   ()
-st.print_age    ()
-st.print_school ()
+st.what_is_your_name ()
+st.how_old_are_you   ()
+st.where_are_you_from()
